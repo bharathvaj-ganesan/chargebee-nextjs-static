@@ -3,8 +3,6 @@
 A free Next.js TypeScript subscription page template for SaaS products, online services and more.
 
 
-<a href="https://next-startd.vercel.app">Live demo</a>
-
 ## Features
 
 - ⚡ **Next.js** — The React Framework
@@ -22,9 +20,9 @@ A free Next.js TypeScript subscription page template for SaaS products, online s
 
 ## Demo
 
-[https://subscription-payments.vercel.app/](https://subscription-payments.vercel.app/)
+[https://chargebee-nextjs-static.vercel.app/](https://chargebee-nextjs-static.vercel.app/)
 
-[![Screenshot of demo](./public/demo.png)](https://subscription-payments.vercel.app/)
+[![Screenshot of demo](./public/demo.png)](https://chargebee-nextjs-static.vercel.app/)
 
 ## 🚀 Getting started
 

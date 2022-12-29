@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
 import { PageMeta } from '../../types';
 
@@ -9,11 +8,9 @@ interface Props {
 }
 
 export default function BaseLayout({ children, meta: pageMeta }: Props) {
-  const router = useRouter();
   const meta = {
     title: 'Next.js Subscription Starter',
-    description: 'Brought to you by Vercel, Stripe, and Supabase.',
-    cardImage: '/og.png',
+    description: 'A free Next.js TypeScript subscription page template for SaaS products, online services and more.',
     ...pageMeta,
   };
 
