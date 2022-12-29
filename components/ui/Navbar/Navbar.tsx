@@ -15,7 +15,6 @@ const Navbar = () => {
               href="/"
             >
               <span className="font-bold text-gray-200">Chargebee</span>&nbsp;Stack<div className="mx-1"></div>
-              <small className="text-sm font-bold text-orange-200">v1.0</small>
             </Link>
           </div>
           <div className="flex flex-1 justify-end space-x-8">
