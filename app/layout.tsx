@@ -1,7 +1,7 @@
 import 'styles/global.css';
 import 'styles/chrome-bug.css';
 import Navbar from 'components/ui/Navbar';
-import Script from 'next/script';
+import Footer from 'components/ui/Footer';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -12,6 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

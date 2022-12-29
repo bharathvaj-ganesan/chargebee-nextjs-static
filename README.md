@@ -61,3 +61,6 @@ To view the project open `http://localhost:3000`
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for more information.
 
+## Credits
+
+Inspired from [Vercel Subscription Template](https://github.com/vercel/nextjs-subscription-payments)

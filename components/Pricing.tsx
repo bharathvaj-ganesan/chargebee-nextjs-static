@@ -40,7 +40,7 @@ export default function Pricing({ itemPrices }: Props) {
                 periodUnit === 'month'
                   ? 'relative w-1/2 bg-primary border-zinc-800 shadow-sm text-white'
                   : 'ml-0.5 relative w-1/2 border border-transparent text-zinc-400'
-              } rounded-md m-1 py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50 focus:z-10 sm:w-auto sm:px-8`}
+              } rounded-md m-1 py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 focus:z-10 sm:w-auto sm:px-8`}
             >
               Monthly billing
             </button>
@@ -51,7 +51,7 @@ export default function Pricing({ itemPrices }: Props) {
                 periodUnit === 'year'
                   ? 'relative w-1/2 bg-primary border-zinc-800 shadow-sm text-white'
                   : 'ml-0.5 relative w-1/2 border border-transparent text-zinc-400'
-              } rounded-md m-1 py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50 focus:z-10 sm:w-auto sm:px-8`}
+              } rounded-md m-1 py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 focus:z-10 sm:w-auto sm:px-8`}
             >
               Yearly billing
             </button>
@@ -77,7 +77,7 @@ export default function Pricing({ itemPrices }: Props) {
                     <Button
                       variant="slim"
                       type="button"
-                      className="mt-8 block w-full rounded-md py-2 text-sm font-semibold bg-primary text-center hover:bg-zinc-900"
+                      className="mt-8 block w-full rounded-md py-2 text-sm font-semibold bg-primary text-center hover:bg-zinc-900 hover:border-primary"
                     >
                       Subscribe
                     </Button>
