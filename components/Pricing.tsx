@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 import Button from 'components/ui/Button';
 import { ItemPrice } from 'types';
+import Script from 'next/script';
 
 interface Props {
   itemPrices: ItemPrice[];
@@ -15,17 +16,29 @@ type PeriodUnit = 'year' | 'month';
 export default function Pricing({ itemPrices }: Props) {
   const [periodUnit, setPeriodUnit] = useState<PeriodUnit>('month');
   const [itemPricesToDisplay, setItemPricesToDisplay] = useState<ItemPrice[]>([]);
+  const [isLoading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     setItemPricesToDisplay(itemPrices.filter((item) => item.periodUnit === periodUnit));
   }, [itemPrices, periodUnit]);
 
+
   useEffect(() => {
-    window.Chargebee.registerAgain();
-  });
+    window.Chargebee?.registerAgain?.();
+  })
 
   return (
     <section className="bg-black">
+      <Script
+        src="https://js.chargebee.com/v2/chargebee.js"
+        onLoad={() => {
+          window.Chargebee.init({
+            site:process.env.NEXT_PUBLIC_CHARGEBEE_SITE_ID,
+            isItemsModel: true,
+          });
+          setLoading(false);
+        }}
+      />
       <div className="max-w-6xl mx-auto py-8 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="sm:flex sm:flex-col sm:align-center">
           <h1 className="text-4xl font-extrabold text-primary sm:text-center sm:text-6xl">Pricing</h1>
@@ -64,6 +77,7 @@ export default function Pricing({ itemPrices }: Props) {
               currency: itemPrice.currencyCode,
               minimumFractionDigits: 0,
             }).format((itemPrice.price || 0) / 100);
+
             return (
               <div key={itemPrice.id} className={cn('rounded-lg shadow-sm divide-y divide-zinc-600 bg-zinc-900')}>
                 <div className="p-6">
@@ -76,8 +90,8 @@ export default function Pricing({ itemPrices }: Props) {
                   <div data-cb-type="checkout" data-cb-item-0={itemPrice.id} data-cb-item-0-quantity="1">
                     <Button
                       variant="slim"
-                      type="button"
-                      className="mt-8 block w-full rounded-md py-2 text-sm font-semibold bg-primary text-center hover:bg-zinc-900 hover:border-primary"
+                      loading={isLoading}
+                      className="mt-8 block w-full rounded-md py-2 text-sm font-semibold text-center hover:bg-zinc-900 hover:border-primary"
                     >
                       Subscribe
                     </Button>
