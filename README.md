@@ -1,4 +1,4 @@
-# NextJS Subscription Pricing Page Starter
+# Next.js Subscription Pricing Page Starter
 
 A free Next.js TypeScript subscription page template for SaaS products, online services and more.
 
