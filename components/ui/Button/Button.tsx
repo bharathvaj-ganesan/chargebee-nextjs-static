@@ -32,9 +32,9 @@ const Button = forwardRef<HTMLButtonElement, Props>((props, buttonRef) => {
     {
       [styles.slim]: variant === 'slim',
       [styles.loading]: loading,
-      [styles.disabled]: disabled
+      [styles.disabled]: disabled,
     },
-    className
+    className,
   );
   return (
     <Component
@@ -45,7 +45,7 @@ const Button = forwardRef<HTMLButtonElement, Props>((props, buttonRef) => {
       disabled={disabled}
       style={{
         width,
-        ...style
+        ...style,
       }}
       {...rest}
     >
@@ -58,5 +58,6 @@ const Button = forwardRef<HTMLButtonElement, Props>((props, buttonRef) => {
     </Component>
   );
 });
+Button.displayName = 'Button';
 
 export default Button;

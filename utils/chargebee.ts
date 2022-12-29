@@ -14,7 +14,8 @@ export function getActiveItemPrices(): Promise<ItemPrice[]> {
     {
       id: 'cbdemo_intermediary-USD-monthly',
       name: 'Intermediary',
-      description: 'For agile startups that want to grow their revenue with quick experiments and data-driven decision making.',
+      description:
+        'For agile startups that want to grow their revenue with quick experiments and data-driven decision making.',
       currencyCode: 'USD',
       price: 60000,
       period: 1,
@@ -41,7 +42,8 @@ export function getActiveItemPrices(): Promise<ItemPrice[]> {
     {
       id: 'cbdemo_intermediary-USD-yearly',
       name: 'Intermediary',
-      description: 'For agile startups that want to grow their revenue with quick experiments and data-driven decision making.',
+      description:
+        'For agile startups that want to grow their revenue with quick experiments and data-driven decision making.',
       currencyCode: 'USD',
       price: 600000,
       period: 1,
@@ -55,7 +57,7 @@ export function getActiveItemPrices(): Promise<ItemPrice[]> {
       price: 750000,
       period: 1,
       periodUnit: 'year',
-    }
+    },
   ];
 
   return Promise.resolve(itemPrices);

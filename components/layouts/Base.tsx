@@ -14,7 +14,7 @@ export default function BaseLayout({ children, meta: pageMeta }: Props) {
     title: 'Next.js Subscription Starter',
     description: 'Brought to you by Vercel, Stripe, and Supabase.',
     cardImage: '/og.png',
-    ...pageMeta
+    ...pageMeta,
   };
 
   return (

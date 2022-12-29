@@ -10,9 +10,7 @@ const Navbar = () => {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex justify-between align-center flex-row py-4 md:py-6 relative">
           <div className="flex flex-1 items-center">
-            <Link href="/">
-              Analytics Product
-            </Link>
+            <Link href="/">Analytics Product</Link>
           </div>
         </div>
       </div>
