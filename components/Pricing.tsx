@@ -22,10 +22,9 @@ export default function Pricing({ itemPrices }: Props) {
     setItemPricesToDisplay(itemPrices.filter((item) => item.periodUnit === periodUnit));
   }, [itemPrices, periodUnit]);
 
-
   useEffect(() => {
     window.Chargebee?.registerAgain?.();
-  })
+  });
 
   return (
     <section className="bg-black">
@@ -33,7 +32,7 @@ export default function Pricing({ itemPrices }: Props) {
         src="https://js.chargebee.com/v2/chargebee.js"
         onLoad={() => {
           window.Chargebee.init({
-            site:process.env.NEXT_PUBLIC_CHARGEBEE_SITE_ID,
+            site: process.env.NEXT_PUBLIC_CHARGEBEE_SITE_ID,
             isItemsModel: true,
           });
           setLoading(false);
@@ -83,7 +82,7 @@ export default function Pricing({ itemPrices }: Props) {
                 <div className="p-6">
                   <h2 className="text-2xl leading-6 font-semibold text-white">{itemPrice.name}</h2>
                   <p className="mt-4 text-zinc-300">{itemPrice.description}</p>
-                  <p className="mt-8">
+                  <p className="mt-12">
                     <span className="text-5xl font-extrabold white">{priceString}</span>
                     <span className="text-base font-medium text-zinc-100">/{periodUnit}</span>
                   </p>
