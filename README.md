@@ -32,6 +32,12 @@ Easiest way to get started is by clicking the "Deploy with Vercel" button below.
 
 If you do not want to deploy, [click here](https://github.com/jkytoela/next-startd/generate) to create a new repository with this template.
 
+You might need to do the following steps to customize,
+
+* Update the env variable `NEXT_PUBLIC_CHARGEBEE_SITE_ID` with your site id.
+* Modify the item prices in this file `utils/chargebee.ts`
+
+
 **Local Development**
 
 Run the following commands inside the project folder:
@@ -40,10 +46,6 @@ Run the following commands inside the project folder:
 2. `yarn dev`
 
 To view the project open `http://localhost:3000`
-
-#### Local Developement
-
-
 
 ## 🤝 Contributing
 
@@ -58,6 +60,12 @@ To view the project open `http://localhost:3000`
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for more information.
+
+## Resources
+
+* https://www.chargebee.com/checkout-portal-docs/dropIn-overview.html
+
+* https://apidocs.chargebee.com/docs/api/hosted_pages#hosted_page_attributes
 
 ## Credits
 
