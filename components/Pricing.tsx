@@ -16,7 +16,6 @@ type PeriodUnit = 'year' | 'month';
 export default function Pricing({ itemPrices }: Props) {
   const [periodUnit, setPeriodUnit] = useState<PeriodUnit>('month');
   const [itemPricesToDisplay, setItemPricesToDisplay] = useState<ItemPrice[]>([]);
-  const [isLoading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     setItemPricesToDisplay(itemPrices.filter((item) => item.periodUnit === periodUnit));
@@ -35,7 +34,6 @@ export default function Pricing({ itemPrices }: Props) {
             site: process.env.NEXT_PUBLIC_CHARGEBEE_SITE_ID,
             isItemsModel: true,
           });
-          setLoading(false);
         }}
       />
       <div className="max-w-6xl mx-auto py-8 sm:py-24 px-4 sm:px-6 lg:px-8">
@@ -89,7 +87,6 @@ export default function Pricing({ itemPrices }: Props) {
                   <div data-cb-type="checkout" data-cb-item-0={itemPrice.id} data-cb-item-0-quantity="1">
                     <Button
                       variant="slim"
-                      loading={isLoading}
                       className="mt-8 block w-full rounded-md py-2 text-sm font-semibold text-center hover:bg-zinc-900 hover:border-primary"
                     >
                       Subscribe
