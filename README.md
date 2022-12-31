@@ -22,7 +22,7 @@ A free Next.js TypeScript subscription page template for SaaS products, online s
 
 [https://chargebee-nextjs-static.vercel.app/](https://chargebee-nextjs-static.vercel.app/)
 
-<img src="./public/demo.png" alt="Screenshot of the app" />
+![Screenshot of the app](https://raw.githubusercontent.com/bharathvaj-ganesan/chargebee-nextjs-static/main/public/demo.png)
 
 ## 🚀 Getting started
 
