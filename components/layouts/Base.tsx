@@ -19,7 +19,7 @@ export default function BaseLayout({ children, meta: pageMeta }: Props) {
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
-        <link href="/favicon.ico" rel="shortcut icon" />
+        <link href="/favicon.png" rel="shortcut icon" />
         <meta content={meta.description} name="description" />
       </Head>
       <main>{children}</main>
