@@ -14,7 +14,7 @@ const Navbar = () => {
               className="flex flex-row items-center text-xl font-light text-gray-400 transition hover:text-gray-100 active:opacity-80"
               href="/"
             >
-              <span className="font-bold text-gray-200">Chargebee</span>&nbsp;Stack<div className="mx-1"></div>
+              <span className="font-bold text-gray-200">Chargebee</span>&nbsp;<span className="text-primary">Stack</span>
             </Link>
           </div>
           <div className="flex flex-1 justify-end space-x-8">
